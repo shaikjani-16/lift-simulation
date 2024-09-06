@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#input-section {
+    margin-bottom: 20px;
+}
+
+#simulation-container {
+
+    justify-content: space-between;
+}
+
+.building {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.floor {
+    display: flex;
+
+    align-items: center;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+.floor-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.floor-button {
+    margin: 2px 0;
+}
+
+.lift {
+    width: 50px;
+    flex-direction: row;
+    display: flex;
+
+    height: 60px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    margin-right: 10px;
+    position: relative;
+    display: flex;
+    transition: bottom 2s linear;
+    overflow: hidden;
+}
+
+.lift-door {
+    width: 50%;
+    height: 100%;
+    background-color: #999;
+    position: absolute;
+    top: 0;
+    transition: transform 2.5s linear;
+}
+
+.lift-door.left {
+    left: 0;
+    transform-origin: left;
+}
+
+.lift-door.right {
+
+    right: 0;
+    transform-origin: right;
+}
+
+.lifts-container {
+    margin-left: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 90px;
+    left: 50px
+}
+
+@media (max-width: 768px) {
+    #simulation-container {
+        flex-direction: column;
+    }
+
+    .lifts-container {
+        margin-left: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+}
